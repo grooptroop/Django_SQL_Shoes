@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="11b55c2f-f89c-4160-a009-374cda4c2f46" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/Django_SQL_Music.iml" afterDir="false" />
