@@ -1,0 +1,52 @@
+{% extends 'main/base.html' %}
+
+{% block title%}
+Покупатели
+{% endblock %}
+{% load static %}
+{% block css_form %}<link rel="stylesheet" href="{% static 'css/table.css' %}">
+<link rel="stylesheet" href="{% static 'css/ch.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Покупатели</h1>
+<table border="2" align="center" width="1700">
+    <th>Имя</th>
+    <th>Фамилия</th>
+    <th>Отчество</th>
+    <th>телефон</th>
+    <th>почта</th>
+    <th>День рождения</th>
+    <th>Адрес</th>
+    <th>Предпочитаемый бренд</th>
+    {%for el  in MShopper %}
+
+        <tr>
+            <p></p>
+            <td>{{el.first_name}}</td>
+            <td>{{el.middle_name}}</td>
+            <td>{{el.last_name}}</td>
+            <td>{{el.telephone_shopper}}</td>
+            <td>{{el.email}}</td>
+            <td>{{el.birthday}}</td>
+            <td>{{el.address}}</td>
+            <td>{{el.favorite_shoes}}</td>
+            <td>
+                    {% if change_Shopper %}
+                    <button onclick="location.href='{% url 'UpdateShopper' el.id_client%}'"  type="submit">изменить</button>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if delete_Shopper %}
+                    <button onclick="location.href='{% url 'DeleteShopper' el.id_client%}'" type="submit" >удалить</button>
+                    {% endif %}
+                </td>
+        </tr>
+    {% endfor %}
+</table>
+<form action="{% url 'AddShopper' %}" method="">
+    {% csrf_token %}
+    {% if add_Shopper %}
+    <button type="submit" class="frog">Новая запись</button>
+    {% endif %}
+    </form>
+{% endblock %}

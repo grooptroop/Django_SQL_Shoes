@@ -1,0 +1,53 @@
+{% extends 'main/base.html' %}
+
+{% block title%}
+Обувь
+{% endblock %}
+{% load static %}
+{% block css_form %}<link rel="stylesheet" href="{% static 'css/table.css' %}">
+<link rel="stylesheet" href="{% static 'css/ch.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Обувь</h1>
+<table border="2" align="center" width="1300">
+    <th>Бренд</th>
+    <th>Название</th>
+    <th>размер</th>
+    <th>цена</th>
+    <th>Остаток</th>
+    <th>Оптовая цена</th>
+    {%for el  in MShoes %}
+        <tr>
+            <p></p>
+            <td>{{el.brand.brand_name}}</td>
+            <td>{{el.name}}</td>
+            <td>{{el.size}}</td>
+            <td>{{el.price}}</td>
+            <td>{{el.remaining}}</td>
+            <td>{{el.cost_of_production}}</td>
+            <td>
+                    {% if change_Shoes %}
+                    <button onclick="location.href='{% url 'UpdateShoes' el.id_shoes%}'"  type="submit">изменить</button>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if delete_Shoes %}
+                    <button onclick="location.href='{% url 'DeleteShoes' el.id_shoes%}'" type="submit" >удалить</button>
+                    {% endif %}
+                </td>
+        </tr>
+    {% endfor %}
+</table>
+<form action="{% url 'AddShoes' %}" method="">
+    {% csrf_token %}
+    {% if add_Shoes %}
+    <button type="submit" class="frog">Новая запись</button>
+    {% endif %}
+</form>
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/newform.css' %}">
+<title>{% block title %}{% endblock %}</title>
+<form class="decor" method="post" >
+    {% csrf_token %}
+<div class="form-left-decoration"></div>
+<div class="form-right-decoration"></div>
+<div class="circle"></div>
+<div class="form-inner">
+
+    {% block content %}{% endblock %}
+
+</div>
+</form>

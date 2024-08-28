@@ -1,0 +1,51 @@
+{% extends 'main/base.html' %}
+
+{% block title%}
+Отпуска
+{% endblock %}
+{% load static %}
+{% block css_form %}<link rel="stylesheet" href="{% static 'css/table.css' %}">
+<link rel="stylesheet" href="{% static 'css/ch.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Отпуска</h1>
+<table border="2" align="center" width="1500">
+    <th>Сотрудник</th>
+    <th>Начало отпуска</th>
+    <th>Количество дней</th>
+    <th>Тип отпуска</th>
+    <th>Фактическое начало</th>
+    <th>Фактический конец</th>
+    {%for el  in MVacation %}
+
+        <tr>
+            <p></p>
+            <td>{{el.staff.first_name}}</td>
+            <td>{{el.starting_date}}</td>
+            <td>{{el.number_of_days}}</td>
+            <td>{{el.type.titels}}</td>
+            <td>{{el.actual_start}}</td>
+            <td>{{el.actual_end}}</td>
+            <td>
+                    {% if change_Vacation %}
+                    <button onclick="location.href='{% url 'UpdateVacation' el.id_vacation%}'"  type="submit">изменить</button>
+                    {% endif %}
+                </td>
+        </tr>
+    {% endfor %}
+</table>
+<form action="{% url 'AddVacation' %}" method="">
+    {% csrf_token %}
+    {% if add_Vacation %}
+    <button type="submit" class="frog">Новая запись</button>
+    {% endif %}
+    </form>
+{% endblock %}
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+
+{% block title%}
+Больничные
+{% endblock %}
+{% load static %}
+{% block css_form %}<link rel="stylesheet" href="{% static 'css/table.css' %}">
+<link rel="stylesheet" href="{% static 'css/ch.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Больничные</h1>
+<table border="2" align="center" width="1300">
+    <th> Начало</th>
+    <th>Конец</th>
+    <th>Код болезни</th>
+    <th>Сотрудник</th>
+    {%for el  in MSickLeave %}
+        <tr>
+            <p></p>
+            <td>{{el.start_date}}</td>
+            <td>{{el.end_date}}</td>
+            <td>{{el.code_disease}}</td>
+            <td>{{el.staff.first_name}}</td>
+            <td>
+                    {% if change_SickLeave %}
+                    <button onclick="location.href='{% url 'UpdateSickLeave' el.id_leave%}'"  type="submit">изменить</button>
+                    {% endif %}
+                </td>
+        </tr>
+    {% endfor %}
+</table>
+<form action="{% url 'AddSickLeave' %}" method="">
+    {% csrf_token %}
+    {% if add_SickLeave %}
+    <button type="submit" class="frog">Новая запись</button>
+    {% endif %}
+    </form>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+
+{% block title%}
+Должность
+{% endblock %}
+{% load static %}
+{% block css_form %}
+<link rel="stylesheet" href="{% static 'css/table.css' %}">
+<link rel="stylesheet" href="{% static 'css/ch.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Должность</h1>
+<table border="2" align="center" width="800">
+    <th>Должность</th>
+    <th>Ставка</th>
+    {%for el  in MPosition %}
+
+        <tr>
+            <p></p>
+            <td>{{el.position_staff}}</td>
+            <td>{{el.salary}}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<form action="{% url 'AddPosition' %}" method=" ">
+    {% csrf_token %}
+    {% if add_Position %}
+        <button type="submit" class="frog">Новая запись</button>
+    {% endif %}
+</form>
+{% endblock %}
+
+
+
+
+
+

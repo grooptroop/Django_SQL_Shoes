@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+
+{% block title%}
+История покупок
+{% endblock %}
+{% load static %}
+{% block css_form %}<link rel="stylesheet" href="{% static 'css/table.css' %}">
+<link rel="stylesheet" href="{% static 'css/ch.css' %}">
+{% endblock %}
+{% block content %}
+<h1>История покупок</h1>
+<table border="2" align="center" width="1500">
+    <th>Клиент</th>
+    <th>Дата_покупки</th>
+    <th>время покупки</th>
+    <th>Сотрудник</th>
+    <th>итоговая цена</th>
+    {%for el  in MReceipt %}
+
+        <tr>
+            <p></p>
+            <td>{{el.client.middle_name}}</td>
+            <td>{{el.date_of_purchase}}</td>
+            <td>{{el.time_of_purchase}}</td>
+            <td>{{el.staff.first_name}}</td>
+            <td>{{el.final_price}}</td>
+        </tr>
+    {% endfor %}
+</table>
+<form action="{% url 'AddReceipt' %}" method="">
+    {% csrf_token %}
+    {% if add_Receipt %}
+    <button type="submit" class="frog">Новая запись</button>
+    {% endif %}
+    </form>
+{% endblock %}
+
+
+
+
+
+

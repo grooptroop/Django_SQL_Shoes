@@ -1,0 +1,55 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block title%}
+Сотрудники
+{% endblock %}
+{% block css_form %}
+<link rel="stylesheet" href="{% static 'css/table.css' %}">
+<link rel="stylesheet" href="{% static 'css/ch.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Сотрудники</h1>
+
+<table border="2" align="center" width="1200">
+    <th>Фамилия</th>
+    <th>Имя</th>
+    <th>Отчество</th>
+    <th>Должность</th>
+    <th>День рождения</th>
+    <th>телефон</th>
+    {%for el  in MStaff %}
+        <tr>
+                <td>{{el.first_name}}</td>
+                <td>{{el.middle_name}}</td>
+                <td>{{el.last_name}}</td>
+                <td>{{el.position.position_staff}}</td>
+                <td>{{el.birthday}}</td>
+                <td>{{el.telephone_staff}}</td>
+                <td>
+                    {% if change_staff %}
+                    <button onclick="location.href='{% url 'UpdateStaff' el.id_staff%}'"  type="submit">изменить</button>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if delete_staff %}
+                    <button onclick="location.href='{% url 'DeleteStaff' el.id_staff%}'" type="submit" >удалить</button>
+                    {% endif %}
+                </td>
+        </tr>
+    {% endfor %}
+</table>
+<form action="{% url 'AddStaff' %}" method="">
+    {% csrf_token %}
+    {% if add_staff %}
+    <button type="submit" class="frog">Новая запись</button>
+    {% endif %}
+    </form>
+{% endblock %}
+
+
+
+
+
+

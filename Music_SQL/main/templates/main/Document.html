@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block title%}
+Выходные документы
+{% endblock %}
+{% block css_form %}
+<link rel="stylesheet" href="{% static 'css/table.css' %}">
+<link rel="stylesheet" href="{% static 'css/cha.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Выходные документы</h1>
+
+<table border="2" align="center" width="600">
+        <tr>
+                <td>Выручка за квартал</td>
+                <td>
+                    <button onclick="location.href='{% url 'Dquarterly_revenue' %}'"  type="submit">Скачать</button>
+                </td>
+        </tr>
+        <tr>
+                <td>Накладная на заказ</td>
+                <td>
+                    <button onclick="location.href='{% url 'shoe_order' %}'"  type="submit">Скачать</button>
+                </td>
+        </tr>
+        <tr>
+                <td>Рассылка возможности предзаказа</td>
+                <td>
+                    <button onclick="location.href='{% url 'new_shoes' %}'"  type="submit">Скачать</button>
+                </td>
+        </tr>
+</table>
+{% endblock %}

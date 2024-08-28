@@ -1,0 +1,6 @@
+{% extends 'main/Addbase.html' %}
+{% block content %}
+<h3>Вы уверены что хотите удалить запись?</h3>
+ <input type="submit" value="удалить">
+<input type="button" value="Назад" onClick="location.href='{% url 'SShopper' %}'" >
+{% endblock %}

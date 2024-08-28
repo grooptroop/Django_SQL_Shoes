@@ -1,0 +1,56 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title%}
+Рабочие дни
+{% endblock %}
+{% load static %}
+{% block css_form %}
+<link rel="stylesheet" href="{% static 'css/table.css' %}">
+<link rel="stylesheet" href="{% static 'css/ch.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Рабочие дни</h1>
+<table border="2" align="center" width="1200">
+    <th>Сотрудник</th>
+    <th>Должность</th>
+    <th>День работы</th>
+    <th>Месяц работы</th>
+    <th>Год работы</th>
+    <th>Месячный оклад</th>
+    {%for el  in MWorkTime %}
+        <tr>
+            <p></p>
+            <td>{{el.staff.first_name}}</td>
+            <td>{{el.position.position_staff}}</td>
+            <td>{{el.day_work}}</td>
+            <td>{{el.month_work}}</td>
+            <td>{{el.year_work}}</td>
+            <td>{{el.monthly_salary}}</td>
+            <td>
+                    {% if change_WorkTime %}
+                    <button onclick="location.href='{% url 'UpdateWorkTime' el.id_work_time%}'"  type="submit">изменить</button>
+                    {% endif %}
+            </td>
+            <td>
+                    {% if delete_WorkTime %}
+                    <button onclick="location.href='{% url 'DeleteWorkTime' el.id_work_time%}'" type="submit" >удалить</button>
+                    {% endif %}
+                </td>
+
+        </tr>
+    {% endfor %}
+</table>
+<form action="{% url 'AddWorkTime' %}" method="">
+    {% csrf_token %}
+    {% if add_WorkTime %}
+    <button type="submit" class="frog">Новая запись</button>
+    {% endif %}
+</form>
+{% endblock %}
+
+
+
+
+
+

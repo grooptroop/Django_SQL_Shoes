@@ -4,10 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11b55c2f-f89c-4160-a009-374cda4c2f46" name="Changes" comment="start project 0.0.3 create base pages">
+    <list default="true" id="11b55c2f-f89c-4160-a009-374cda4c2f46" name="Changes" comment="start project 0.0.4 added mysql bd">
+      <change afterPath="$PROJECT_DIR$/Music_SQL/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/image/delete_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/image/edit_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/static/css/ch.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/static/css/newform.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/static/css/sas.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/static/css/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/AddPosition.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/AddReceipt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/AddShoes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/AddShopper.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/AddSickLeave.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/AddStaff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/AddVacation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/AddWorkTime.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/Addbase.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/DeleteShoes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/DeleteShopper.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/DeleteStaff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/DeleteWorkTime.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/Document.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/SPosition.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/SReceipt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/SShoes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/SShopper.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/SSickLeave.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/SStaff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/SVacation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/SWorkTime.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Music_SQL/Music_SQL/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Music_SQL/Music_SQL/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music_SQL/Music_SQL/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Music_SQL/Music_SQL/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music_SQL/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Music_SQL/main/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Music_SQL/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Music_SQL/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music_SQL/main/templates/main/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music_SQL/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Music_SQL/main/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music_SQL/main/templates/main/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music_SQL/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Music_SQL/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music_SQL/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Music_SQL/main/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +64,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;grooptroop&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8033cff2-8f2b-4cd7-9a8d-320c9dffc1c7" />
+        <option name="url" value="https://github.com/grooptroop/Django_SQL_Music.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -37,12 +90,22 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.urls.executor&quot;: &quot;Run&quot;,
+    &quot;Python.views.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\doldo\PycharmProjects\Django_SQL_Music\Music_SQL\main\image" />
+      <recent name="C:\Users\doldo\PycharmProjects\Django_SQL_Music\Music_SQL\main\static" />
+      <recent name="C:\Users\doldo\PycharmProjects\Django_SQL_Music\Music_SQL\main" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -91,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713986149913</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="start project 0.0.4 added mysql bd">
+      <option name="closed" value="true" />
+      <created>1713994519714</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713994519714</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,6 +190,7 @@
     <MESSAGE value="start project 0.0.1" />
     <MESSAGE value="start project 0.0.2 create main" />
     <MESSAGE value="start project 0.0.3 create base pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="start project 0.0.3 create base pages" />
+    <MESSAGE value="start project 0.0.4 added mysql bd" />
+    <option name="LAST_COMMIT_MESSAGE" value="start project 0.0.4 added mysql bd" />
   </component>
 </project>
